@@ -46,10 +46,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed } from "vue";
+import { defineComponent, ref, computed, watch } from "vue";
 import VacanciesData from "./VacanciesData.vue";
 
-type Currenc = {
+type Currency = {
   label: string;
   coefficient: number;
 };
@@ -86,7 +86,13 @@ export default defineComponent({
     const sortOrder = ref("asc");
     const hiddenVacancies = ref<Set<number>>(new Set());
 
-    //Functions
+    watch(maxSalary, (newVal) => {
+      if (newVal === "") {
+        maxSalary.value = Infinity;
+      }
+    });
+
+    // Functions
 
     function formatSalary(vacancy: Vacancy): string {
       const salaryInSelectedCurrency =
