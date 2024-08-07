@@ -47,6 +47,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, computed } from "vue";
+import VacanciesData from "./VacanciesData.vue";
 
 type Currenc = {
   label: string;
@@ -66,33 +67,12 @@ type Vacancy = {
 
 export default defineComponent({
   name: "Vacancies",
+  components: {
+    VacanciesData,
+  },
   setup() {
     //Json Data
-    const vacancies: Vacancy[] = [
-      {
-        id: 1,
-        title: "Frontend Developer",
-        salary: {
-          value: 10000,
-          currencies: [
-            { label: "USD", coefficient: 1.5 },
-            { label: "RUB", coefficient: 1 },
-          ],
-        },
-      },
-      {
-        id: 2,
-        title: "Backend Developer",
-        salary: {
-          value: 8000,
-          currencies: [
-            { label: "USD", coefficient: 1.5 },
-            { label: "RUB", coefficient: 1 },
-          ],
-        },
-      },
-    ];
-
+    const vacancies = VacanciesData.data().vacancies;
     //Main Data
     const currencies = [
       { label: "USD", coefficient: 1.5 },
