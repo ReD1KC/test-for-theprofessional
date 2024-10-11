@@ -1,5 +1,32 @@
-# Vue 3 + TypeScript + Vite
+# Компонент для поиска и сортировки вакансий
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Описание
+Компонент с функциями сортировки и поиска ваканcий по заданным категориям или параметрам.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Технологии
+- **Язык/Фреймворк:** `TypeScript`, `Vue`
+- **Библиотеки:** `Tailwind CSS`
+- **Инструменты разработки:** `Bun`, `Vite`
+
+## Установка
+1. Клонируйте репозиторий:
+    ```bash
+    git clone https://github.com/ваш-пользователь/название-проекта.git
+    ```
+2. Перейдите в папку проекта:
+    ```bash
+    cd название-проекта
+    ```
+3. Установите зависимости:
+    ```bash
+    npm install
+    ```
+    или, если вы используете Bun:
+    ```bash
+    bun install
+    ```
+
+## Запуск
+Для запуска проекта в режиме разработки выполните:
+```bash
+npm run dev
